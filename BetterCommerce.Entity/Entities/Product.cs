@@ -9,7 +9,10 @@ namespace BetterCommerce.Entity.Entities
         public int Star { get; set; }
 
         public int SoldCount { get; set; }
-        [Column(TypeName = "decimal(18,2)")] public double Price { get; set; }
+        [Column(TypeName = "decimal(18,2)")] public double BasePrice { get; set; }
+        [Column(TypeName = "decimal(18,2)")] public double DiscountPrice { get; set; }
+        [Column(TypeName = "decimal(18,2)")] public double FinalPrice { get; set; }
+        
         public string Name { get; set; }
 
         public string Description { get; set; }
