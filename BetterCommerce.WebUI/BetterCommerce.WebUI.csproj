@@ -1,0 +1,1037 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <Content Update="wwwroot\js\theme.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\custom.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\contact.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\stellar.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\gmaps.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\slick.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\popper.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.form.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\mail-script.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\price_rangs.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\masonry.pkgd.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\bootstrap.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\particles.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper.jquery.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper_custom.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\waypoints.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\lightslider.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.downCount.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\masonry.pkgd.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\owl.carousel.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery-1.12.1.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.easing.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.validate.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.ajaxchimp.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.counterup.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery-3.3.1.slim.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.magnific-popup.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.nice-select.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-brands-400.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-brands-400.svg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-brands-400.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-brands-400.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-brands-400.woff2">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-regular-400.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-regular-400.svg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-regular-400.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-regular-400.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-regular-400.woff2">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-solid-900.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-solid-900.svg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-solid-900.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-solid-900.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\webfonts\fa-solid-900.woff2">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\all.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\animate.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\aos.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\bootstrap.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\flaticon.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\font-awesome.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\lightslider.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\magnific-popup.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\nice-select.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\owl.carousel.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\price_rangs.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\slick-theme.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\slick.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\slick.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\style.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\style.map">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\swiper.min.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\css\themify-icons.css">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\Flaticon.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\Flaticon.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\Flaticon.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\Flaticon.woff2">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\fontawesome-webfont.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\fontawesome-webfont.svg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\fontawesome-webfont.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\fontawesome-webfont.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\fontawesome-webfont.woff2">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\FontAwesome.otf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\themify.eot">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\themify.svg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\themify.ttf">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\fonts\themify.woff">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\about_img.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\about_img_1.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\about_shape.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\b1.jpg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\b2.jpg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\b3.jpg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\banner_bg.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\banner_img.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\breadcrumb.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\cta_bg.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\favicon.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\fevicon.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\footer_bg.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\footer_logo.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\left_sharp.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\login.jpg">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\logo.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\offer-bg.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\offer_img.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\img\subscribe_area.png">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\aos.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\bootstrap.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\contact.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\custom.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\gmaps.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery-1.12.1.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery-3.3.1.slim.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.ajaxchimp.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.counterup.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.downCount.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.easing.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.form.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.magnific-popup.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.nice-select.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\jquery.validate.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\lightslider.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\mail-script.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\masonry.pkgd.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\masonry.pkgd.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\owl.carousel.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\particles.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\popper.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\price_rangs.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\slick.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\stellar.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper.jquery.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\swiper_custom.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\theme.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\js\waypoints.min.js">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\style.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_about_us.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_banner.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_best_seller.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_blog.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_blog_part.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_breadcrumb.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_button.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_client_logo.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_common.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_confirmation_part.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_contact.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_copyright_part.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_cource_details.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_cta_part.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_elements.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_extends.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_feature_part.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_footer.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_menu.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_mixins.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_our_offer.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_product.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_product_list.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_review.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_single_blog.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_special_cource.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_subscribe_area.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="wwwroot\sass\_variables.scss">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\Footer\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\BestSellers\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\AwesomeShop\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\ShowCase\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\Header\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\Carousel\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\Featured\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Shared\Components\Login\Default.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Account\Login.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="Views\Account\Register.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\img\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\about_img.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\about_img_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\about_shape.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape-1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape-10.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\Shape-13.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\Shape-14.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\Shape-16.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape-3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape-7.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape-8.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\animate_icon\shape.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\author\author_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\author\author_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\author\author_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\b1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\b2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\b3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\banner\banner-bg.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\banner_bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\banner_img.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\add.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\author.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\blog_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\c1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\c2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\c3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\cat-post\cat-post-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\cat-post\cat-post-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\cat-post\cat-post-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\causes\causes-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\causes\causes-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\causes\causes-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\feature-img1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\learn_about_bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\main-blog\m-blog-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\main-blog\m-blog-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\main-blog\m-blog-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\main-blog\m-blog-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\main-blog\m-blog-5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\next.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\popular-post\post1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\popular-post\post2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\popular-post\post3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\popular-post\post4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\post-img1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\post-img2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\prev.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\single_blog_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\single_blog_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\single_blog_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\single_blog_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\single_blog_5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\blog\slide_thumb_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\breadcrumb.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\breadcrumb\checkout-bg.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\client_logo\client_logo_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\client_logo\client_logo_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\client_logo\client_logo_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\client_logo\client_logo_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\client_logo\client_logo_5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\comment\comment_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\comment\comment_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\comment\comment_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\cta_bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\a.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\a2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\d.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\disabled-check.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\disabled-radio.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\f8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\g8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\primary-check.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\primary-radio.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\success-check.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\success-radio.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\user1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\user2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\elements\_DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\favicon.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\feature\feature_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\feature\feature_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\feature\feature_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\feature\feature_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\fevicon.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\footer_bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\footer_logo.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\color_star.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_1.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_2.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\feature_icon_3.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\left.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\play.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\quate.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\right-arrow.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\right.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\icon\star.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\i8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\instagram\widget-i6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\left_sharp.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\login.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\logo.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\offer-bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\offer_img.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\next.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_10.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_7.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_8.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\post_9.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\post\preview.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\b1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\b2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\b3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\banner\banner-bg.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\add.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\author.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\blog1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\blog2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\blog3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\c1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\c2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\c3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\cat-post\cat-post-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\cat-post\cat-post-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\cat-post\cat-post-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\causes\causes-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\causes\causes-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\causes\causes-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\feature-img1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\main-blog\m-blog-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\main-blog\m-blog-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\main-blog\m-blog-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\main-blog\m-blog-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\main-blog\m-blog-5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\next.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\popular-post\post1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\popular-post\post2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\popular-post\post3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\popular-post\post4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\post-img1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\post-img2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\blog\prev.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\breadcrumb\checkout-bg.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\feature-product\f-p-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\feature-product\f-p-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\feature-product\f-p-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\fevicon.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\inspired-product\i8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\i8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\instagram\widget-i6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\login.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\logo.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-10.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-11.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-12.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\most-product\m-product-9.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\new-product\n1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\new-product\n2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\new-product\n3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\new-product\n4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\new-product\new-product1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\offer-bg.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\.DS_Store" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\feature-product\f-p-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\feature-product\f-p-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\feature-product\f-p-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\inspired-product\i8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-10.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-11.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-12.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\most-product\m-product-9.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\new-product\n1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\new-product\n2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\new-product\n3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\new-product\n4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\new-product\new-product1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\card.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\cart-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\review-1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\review-2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\review-3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\s-product-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\s-product-s-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\s-product-s-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product\single-product\s-product-s-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_4.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_5.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_6.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_7.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\product_8.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\card.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\cart-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\product_1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\review-1.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\review-2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\review-3.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\s-product-1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\s-product-s-2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\s-product-s-3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\product\single-product\s-product-s-4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\img\subscribe_area.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\bootstrap\LICENSE" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery-validation\LICENSE.md" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.map" />
+      <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-brands-400.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-brands-400.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-brands-400.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-brands-400.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-brands-400.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-regular-400.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-regular-400.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-regular-400.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-regular-400.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-regular-400.woff2" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-solid-900.eot" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-solid-900.svg" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-solid-900.ttf" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-solid-900.woff" />
+      <_ContentIncludedByDefault Remove="wwwroot\webfonts\fa-solid-900.woff2" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\BetterCommerce.Business\BetterCommerce.Business.csproj" />
+      <ProjectReference Include="..\BetterCommerce.Core\BetterCommerce.Core.csproj" />
+      <ProjectReference Include="..\BetterCommerce.DataAccess\BetterCommerce.DataAccess.csproj" />
+      <ProjectReference Include="..\BetterCommerce.Entity\BetterCommerce.Entity.csproj" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="5.2.0" />
+      <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.0-preview.7.20365.19" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0-preview.7.20364.11" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0-preview.7.20364.11" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.7.2-preview-10803222715" />
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.2-preview-10803222715" />
+    </ItemGroup>
+
+</Project>

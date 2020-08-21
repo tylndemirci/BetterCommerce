@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@await Component.InvokeAsync("Carousel")
+
+@await Component.InvokeAsync("Featured")
+
+<!-- SHOWCASE -->
+@await Component.InvokeAsync("ShowCase")
+
+<!-- AWESOME SHOP -->
+@await Component.InvokeAsync("AwesomeShop")
+<!-- BEST SELLERS -->
+@await Component.InvokeAsync("BestSellers")
