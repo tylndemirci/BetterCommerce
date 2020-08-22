@@ -13,5 +13,6 @@ namespace BetterCommerce.Business.Abstract
         IResult AddProduct(Product product);
         IResult DeleteProduct(Product product);
         IResult EditProduct(Product product);
+       
     }    
 }

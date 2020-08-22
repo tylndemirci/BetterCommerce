@@ -8,18 +8,18 @@ namespace BetterCommerce.AdminUI.Models.Products
         public ListProductsModel(Product product)
         {
             Star = product.Star;
-            Price = product.Price;
+            FinalPrice = product.FinalPrice;
             Name = product.Name;
-            Brand = product.Brand;
+            BrandId = product.BrandId;
             CategoryName = product.Category.Name;
             IsStock = product.IsStock;
             IsInSale = product.IsInSale;
             ImageUrl = product.Images.FirstOrDefault()?.ImageUrl;
         }
         public int Star { get; set; }
-        public double Price { get; set; }
+        public double FinalPrice { get; set; }
         public string Name { get; set; }
-        public string Brand { get; set; }
+        public int BrandId { get; set; }
         public string CategoryName { get; set; }
         public bool IsStock { get; set; }
         public bool IsInSale { get; set; }

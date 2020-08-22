@@ -7,5 +7,6 @@ namespace BetterCommerce.Business.Structure.Abstract
         public IAuthService Auth { get; }
         public IProductService Product { get; }
         public IRoleService Role { get; }
+        public IProductDetailService ProductDetail { get;}
     }
 }

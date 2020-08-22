@@ -83,6 +83,7 @@ namespace BetterCommerce.Business.Concrete
                     productList = productList.OrderByDescending(x => x.SoldCount);
                     break;
                 case EnumProductListOptions.NewestProducts:
+                    productList = productList.OrderBy(x => x.CreatedAt);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(listOptions), listOptions, null);
@@ -117,7 +118,6 @@ namespace BetterCommerce.Business.Concrete
                 CategoryId = product.CategoryId,
                 Count = product.Count,
                 Description = product.Description,
-                ImageId = product.ImageId,
                 Name = product.Name.FirstCharToUpper(),
                 BasePrice = product.BasePrice,
                 DiscountPrice = product.DiscountPrice,
@@ -125,7 +125,6 @@ namespace BetterCommerce.Business.Concrete
                 IsFeatured = product.IsFeatured,
                 IsStock = product.Count > 0,
                 IsInSale = product.DiscountPrice > 0,
-                ProductDetailsId = product.ProductDetailsId,
                 CreatedAt = DateTime.Now
             };
             _productRepo.Create(newProduct);
@@ -134,13 +133,29 @@ namespace BetterCommerce.Business.Concrete
             {
                 return new ErrorResult("Failed to add the product.");
             }
+
             return new SuccessResult("Product successfully added.");
         }
 
         public IResult DeleteProduct(Product product)
         {
-            var deletingProduct = _productRepo.GetBy(x=>x.Id == product.Id).FirstOrDefault();
-            if (deletingProduct==null) return new ErrorResult("Product not found.");
+            var deletingProduct = _productRepo.GetBy(x => x.Id == product.Id).FirstOrDefault();
+            if (deletingProduct == null) return new ErrorResult("Product not found.");
+            deletingProduct.BrandId = product.BrandId;
+            deletingProduct.CategoryId = product.CategoryId;
+            deletingProduct.Count = product.Count;
+            deletingProduct.Description = product.Description;
+            deletingProduct.Name = product.Name.FirstCharToUpper();
+            deletingProduct.BasePrice = product.BasePrice;
+            deletingProduct.DiscountPrice = product.DiscountPrice;
+            deletingProduct.FinalPrice = product.BasePrice - product.DiscountPrice;
+            deletingProduct.IsFeatured = product.IsFeatured;
+            deletingProduct.IsStock = product.Count > 0;
+            deletingProduct.IsInSale = product.DiscountPrice > 0;
+            deletingProduct.Star = product.Star;
+            deletingProduct.SoldCount = product.SoldCount;
+            deletingProduct.ModifiedAt = DateTime.Now;
+            deletingProduct.CreatedAt = product.CreatedAt;
             deletingProduct.IsDeleted = true;
             _productRepo.Update(deletingProduct);
             var result = _unitOfWork.SaveChanges();
@@ -148,22 +163,21 @@ namespace BetterCommerce.Business.Concrete
             {
                 return new ErrorResult("Failed to update the product.");
             }
-            return new SuccessResult("Product successfully deleted.");
 
+            return new SuccessResult("Product successfully deleted.");
         }
 
         public IResult EditProduct(Product product)
         {
             if (product == null) return new ErrorResult("Product is empty.");
             if (product.Name.IsNullS()) return new ErrorResult("Product name is empty.");
-            var newProduct = _productRepo.GetBy(x=>x.Id == product.Id).FirstOrDefault();
+            var newProduct = _productRepo.GetBy(x => x.Id == product.Id).FirstOrDefault();
             if (newProduct != null)
             {
                 newProduct.BrandId = product.BrandId;
                 newProduct.CategoryId = product.CategoryId;
                 newProduct.Count = product.Count;
                 newProduct.Description = product.Description;
-                newProduct.ImageId = product.ImageId;
                 newProduct.Name = product.Name.FirstCharToUpper();
                 newProduct.BasePrice = product.BasePrice;
                 newProduct.DiscountPrice = product.DiscountPrice;
@@ -171,10 +185,10 @@ namespace BetterCommerce.Business.Concrete
                 newProduct.IsFeatured = product.IsFeatured;
                 newProduct.IsStock = product.Count > 0;
                 newProduct.IsInSale = product.DiscountPrice > 0;
-                newProduct.ProductDetailsId = product.ProductDetailsId;
-                newProduct.CreatedAt = DateTime.Now;
                 newProduct.Star = product.Star;
                 newProduct.SoldCount = product.SoldCount;
+                newProduct.ModifiedAt = DateTime.Now;
+                newProduct.CreatedAt = product.CreatedAt;
                 _productRepo.Create(newProduct);
             }
 
@@ -183,6 +197,7 @@ namespace BetterCommerce.Business.Concrete
             {
                 return new ErrorResult("Failed to add the product.");
             }
+
             return new SuccessResult("Product successfully added.");
         }
     }

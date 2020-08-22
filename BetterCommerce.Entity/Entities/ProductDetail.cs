@@ -2,7 +2,7 @@
 
 namespace BetterCommerce.Entity.Entities
 {
-    public class ProductDetails: BaseEntity
+    public class ProductDetail: BaseEntity
     {
         [Required] public int ProductId { get; set; }
         public virtual Product Product { get; set; }

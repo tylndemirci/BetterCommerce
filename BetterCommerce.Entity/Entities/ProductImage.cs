@@ -1,6 +1,6 @@
 ﻿namespace BetterCommerce.Entity.Entities
 {
-    public class ProductImages
+    public class ProductImage
     {
         public int Id { get; set; }
         public string ImageUrl { get; set; }

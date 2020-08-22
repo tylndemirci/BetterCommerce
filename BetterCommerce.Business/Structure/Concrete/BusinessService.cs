@@ -21,11 +21,13 @@ namespace BetterCommerce.Business.Structure.Concrete
         private readonly IPasswordHasher<ApplicationUser> _passwordHasher;
         private readonly IMemoryCache _cache;
         private readonly IBaseDal<Product> _productRepo;
+        private readonly IBaseDal<ProductDetail> _productDetailRepo;
 
 
         public BusinessService(IUnitOfWork uow, UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, IPasswordValidator<ApplicationUser> passwordValidator,
-            ITokenHelper tokenHelper, RoleManager<ApplicationRole> roleManager, IPasswordHasher<ApplicationUser> passwordHasher, IMemoryCache cache, IBaseDal<Product> productRepo)
+            ITokenHelper tokenHelper, RoleManager<ApplicationRole> roleManager, IPasswordHasher<ApplicationUser> passwordHasher, IMemoryCache cache, IBaseDal<Product> productRepo,
+            IBaseDal<ProductDetail> productDetailRepo)
         {
             _uow = uow;
             _userManager = userManager;
@@ -36,6 +38,7 @@ namespace BetterCommerce.Business.Structure.Concrete
             _passwordHasher = passwordHasher;
             _cache = cache;
             _productRepo = productRepo;
+            _productDetailRepo = productDetailRepo;
         }
 
         private IAuthService _authService;
@@ -46,5 +49,8 @@ namespace BetterCommerce.Business.Structure.Concrete
 
         private IRoleService _roleService;
         public IRoleService Role => _roleService ??= new RoleManager(_userManager, _signInManager, _passwordValidator, _tokenHelper, _roleManager, _passwordHasher);
+
+        private IProductDetailService _productDetailService;
+        public IProductDetailService ProductDetail => _productDetailService ??= new ProductDetailManager(_productDetailRepo, _uow);
     }
 }
