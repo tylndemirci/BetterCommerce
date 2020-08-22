@@ -22,12 +22,12 @@ namespace BetterCommerce.Business.Structure.Concrete
         private readonly IMemoryCache _cache;
         private readonly IBaseDal<Product> _productRepo;
         private readonly IBaseDal<ProductDetail> _productDetailRepo;
-
+        private readonly IBaseDal<ProductImage> _imgRepo;
 
         public BusinessService(IUnitOfWork uow, UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, IPasswordValidator<ApplicationUser> passwordValidator,
             ITokenHelper tokenHelper, RoleManager<ApplicationRole> roleManager, IPasswordHasher<ApplicationUser> passwordHasher, IMemoryCache cache, IBaseDal<Product> productRepo,
-            IBaseDal<ProductDetail> productDetailRepo)
+            IBaseDal<ProductDetail> productDetailRepo, IBaseDal<ProductImage> imgRepo)
         {
             _uow = uow;
             _userManager = userManager;
@@ -39,6 +39,7 @@ namespace BetterCommerce.Business.Structure.Concrete
             _cache = cache;
             _productRepo = productRepo;
             _productDetailRepo = productDetailRepo;
+            _imgRepo = imgRepo;
         }
 
         private IAuthService _authService;
@@ -52,5 +53,8 @@ namespace BetterCommerce.Business.Structure.Concrete
 
         private IProductDetailService _productDetailService;
         public IProductDetailService ProductDetail => _productDetailService ??= new ProductDetailManager(_productDetailRepo, _uow);
+
+        private IProductImageService _productImageService;
+        public IProductImageService ProductImage => _productImageService ??= new ProductImageManager(_imgRepo, _uow);
     }
 }

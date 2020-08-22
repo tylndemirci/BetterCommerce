@@ -8,5 +8,6 @@ namespace BetterCommerce.Business.Structure.Abstract
         public IProductService Product { get; }
         public IRoleService Role { get; }
         public IProductDetailService ProductDetail { get;}
+        public IProductImageService ProductImage { get;}
     }
 }
