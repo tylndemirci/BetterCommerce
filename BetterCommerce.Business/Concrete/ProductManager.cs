@@ -169,7 +169,7 @@ namespace BetterCommerce.Business.Concrete
 
         public IResult EditProduct(Product product)
         {
-            if (product == null) return new ErrorResult("Product is empty.");
+            if (product == null) return new ErrorResult("Product not found.");
             if (product.Name.IsNullS()) return new ErrorResult("Product name is empty.");
             var newProduct = _productRepo.GetBy(x => x.Id == product.Id).FirstOrDefault();
             if (newProduct != null)
