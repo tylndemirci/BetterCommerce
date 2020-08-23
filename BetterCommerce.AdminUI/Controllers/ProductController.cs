@@ -6,7 +6,7 @@ namespace BetterCommerce.AdminUI.Controllers
 {
     public class ProductController : BaseController
     {
-        
+        private readonly IBusinessService _businessService;
         public IActionResult ListProducts()
         {
          var products= _businessService.Product.GetAllProducts();
@@ -20,6 +20,7 @@ namespace BetterCommerce.AdminUI.Controllers
 
         public ProductController(IBusinessService businessService, IUnitOfWork unitOfWork) : base(businessService, unitOfWork)
         {
+            _businessService = businessService;
         }
     }
 }
