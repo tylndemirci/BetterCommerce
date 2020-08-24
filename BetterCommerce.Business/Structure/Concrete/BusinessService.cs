@@ -23,11 +23,14 @@ namespace BetterCommerce.Business.Structure.Concrete
         private readonly IBaseDal<Product> _productRepo;
         private readonly IBaseDal<ProductDetail> _productDetailRepo;
         private readonly IBaseDal<ProductImage> _imgRepo;
+        private readonly IBaseDal<Category> _categoryRepo;
+        private readonly IBaseDal<Order> _orderRepo;
+        private readonly IBaseDal<OrderLine> _orderLineRepo;
 
         public BusinessService(IUnitOfWork uow, UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, IPasswordValidator<ApplicationUser> passwordValidator,
             ITokenHelper tokenHelper, RoleManager<ApplicationRole> roleManager, IPasswordHasher<ApplicationUser> passwordHasher, IMemoryCache cache, IBaseDal<Product> productRepo,
-            IBaseDal<ProductDetail> productDetailRepo, IBaseDal<ProductImage> imgRepo)
+            IBaseDal<ProductDetail> productDetailRepo, IBaseDal<ProductImage> imgRepo, IBaseDal<Category> categoryRepo, IBaseDal<Order> orderRepo, IBaseDal<OrderLine> orderLineRepo)
         {
             _uow = uow;
             _userManager = userManager;
@@ -40,6 +43,9 @@ namespace BetterCommerce.Business.Structure.Concrete
             _productRepo = productRepo;
             _productDetailRepo = productDetailRepo;
             _imgRepo = imgRepo;
+            _categoryRepo = categoryRepo;
+            _orderRepo = orderRepo;
+            _orderLineRepo = orderLineRepo;
         }
 
         private IAuthService _authService;
@@ -56,5 +62,11 @@ namespace BetterCommerce.Business.Structure.Concrete
 
         private IProductImageService _productImageService;
         public IProductImageService ProductImage => _productImageService ??= new ProductImageManager(_imgRepo, _uow);
+
+        private ICategoryService _categoryService;
+        public ICategoryService Category => _categoryService ??= new CategoryManager(_categoryRepo, _uow);
+        
+        private IOrderService _orderService;
+        public IOrderService Order => _orderService ??= new OrderManager(_orderRepo);
     }
 }

@@ -65,7 +65,6 @@ namespace BetterCommerce.Business.Concrete
             var editingCategory = _categoryRepo.GetBy(x => x.Id == category.Id)?.FirstOrDefault();
             if (editingCategory == null) return new ErrorResult("Category not found");
             editingCategory.Name = category.Name;
-            editingCategory.Products = category.Products;
             editingCategory.ProductId = category.ProductId;
             editingCategory.SubCategories = category.SubCategories;
             editingCategory.ParentCategoryId = category.ParentCategoryId;
