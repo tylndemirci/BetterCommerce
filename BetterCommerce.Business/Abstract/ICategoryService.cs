@@ -12,7 +12,5 @@ namespace BetterCommerce.Business.Abstract
         IResult EditCategory(Category category);
         IResult DeleteCategory(Category category);
         IResult AddSubCategory(Category category);
-        IResult EditSubCategory(Category category);
-        IResult DeleteSubCategory(Category category);
     }
 }    

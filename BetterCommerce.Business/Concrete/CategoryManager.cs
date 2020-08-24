@@ -24,21 +24,21 @@ namespace BetterCommerce.Business.Concrete
         public IDataResult<IQueryable<Category>> GetMainCategoryList()
         {
             var mainCategories = _categoryRepo.GetAll()?.Where(x =>
-                x.IsDeleted == false
-                && x.ParentCategoryId == null)
-                .Include(x=>x.SubCategories)
-                .Include(x=>x.ParentCategory);
-            return mainCategories != null 
-                ? (IDataResult<IQueryable<Category>>) new SuccessDataResult<IQueryable<Category>>(mainCategories) 
+                    x.IsDeleted == false
+                    && x.ParentCategoryId == null)
+                .Include(x => x.SubCategories)
+                .Include(x => x.ParentCategory);
+            return mainCategories != null
+                ? (IDataResult<IQueryable<Category>>) new SuccessDataResult<IQueryable<Category>>(mainCategories)
                 : new ErrorDataResult<IQueryable<Category>>("There is no category.");
         }
 
         public IDataResult<IQueryable<Category>> GetSubCategory(int categoryId)
         {
             var subCategories = _categoryRepo.GetBy(x =>
-                x.ParentCategoryId == categoryId)?.Where(x => x.IsDeleted == false)
-                .Include(x=>x.SubCategories)
-                .Include(x=>x.ParentCategory);
+                    x.ParentCategoryId == categoryId)?.Where(x => x.IsDeleted == false)
+                .Include(x => x.SubCategories)
+                .Include(x => x.ParentCategory);
             return subCategories != null
                 ? (IDataResult<IQueryable<Category>>) new SuccessDataResult<IQueryable<Category>>(subCategories)
                 : new ErrorDataResult<IQueryable<Category>>("There is no sub category.");
@@ -63,9 +63,12 @@ namespace BetterCommerce.Business.Concrete
         {
             if (category.Name.IsNullS()) return new ErrorResult("Category name is empty.");
             var editingCategory = _categoryRepo.GetBy(x => x.Id == category.Id)?.FirstOrDefault();
-            if (editingCategory==null) return new ErrorResult("Category not found");
+            if (editingCategory == null) return new ErrorResult("Category not found");
             editingCategory.Name = category.Name;
-            if (category.ParentCategoryId != null) editingCategory.ParentCategoryId = category.ParentCategoryId;
+            editingCategory.Products = category.Products;
+            editingCategory.ProductId = category.ProductId;
+            editingCategory.SubCategories = category.SubCategories;
+            editingCategory.ParentCategoryId = category.ParentCategoryId;
             editingCategory.CreatedAt = category.CreatedAt;
             editingCategory.ModifiedAt = DateTime.Now;
             _categoryRepo.Update(editingCategory);
@@ -78,12 +81,12 @@ namespace BetterCommerce.Business.Concrete
         public IResult DeleteCategory(Category category)
         {
             var deletingCategory = _categoryRepo.GetBy(x => x.Id == category.Id)?.FirstOrDefault();
-            if (deletingCategory==null) return new ErrorResult("Category not found");
+            if (deletingCategory == null) return new ErrorResult("Category not found");
             var checkForSubs = _categoryRepo.GetBy(x => x.ParentCategoryId == deletingCategory.Id);
             deletingCategory.IsDeleted = true;
-            deletingCategory.ModifiedAt= DateTime.Now;
+            deletingCategory.ModifiedAt = DateTime.Now;
             _categoryRepo.Update(deletingCategory);
-            if (checkForSubs!=null)
+            if (checkForSubs != null)
             {
                 var subs = new List<Category>();
                 subs.AddRange(checkForSubs);
@@ -95,6 +98,7 @@ namespace BetterCommerce.Business.Concrete
                     subs.AddRange(checkAgain);
                 }
             }
+
             _categoryRepo.Update(deletingCategory);
             var result = _unitOfWork.SaveChanges();
             return result > 0
@@ -102,19 +106,25 @@ namespace BetterCommerce.Business.Concrete
                 : new ErrorResult("Category not deleted.");
         }
 
+        //todo test
         public IResult AddSubCategory(Category category)
         {
-            throw new System.NotImplementedException();
+            if (category == null) return new ErrorResult("Category not found.");
+            if (category.Name.IsNullS()) return new ErrorResult("Category name is empty.");
+            var getMainCategory = _categoryRepo.GetBy(x => x.Id == category.ParentCategoryId)?.FirstOrDefault();
+            if (getMainCategory == null) return new ErrorResult("Main category not found.");
+            var createCat = new Category();
+            createCat.Name = category.Name;
+            createCat.ParentCategoryId = getMainCategory?.ParentCategoryId;
+            createCat.CreatedAt = DateTime.Now;
+            _categoryRepo.Create(createCat);
+            getMainCategory?.SubCategories.Add(createCat);
+            _categoryRepo.Update(getMainCategory);
+            var result = _unitOfWork.SaveChanges();
+            return result > 0
+                ? (IResult) new SuccessResult("Sub category successfully added.")
+                : new ErrorResult("Sub category not added.");
         }
-
-        public IResult EditSubCategory(Category category)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IResult DeleteSubCategory(Category category)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }
