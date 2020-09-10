@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BetterCommerce.Business.Structure.Abstract;
+using BetterCommerce.DataAccess.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace BetterCommerce.AdminUI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
       
 
@@ -11,7 +13,10 @@ namespace BetterCommerce.AdminUI.Controllers
         {
             return View();
         }
- 
-      
+
+
+        public HomeController(IBusinessService businessService, IUnitOfWork unitOfWork) : base(businessService, unitOfWork)
+        {
+        }
     }
 }

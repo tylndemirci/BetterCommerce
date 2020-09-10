@@ -10,18 +10,16 @@ namespace BetterCommerce.AdminUI.Models.Products
             Star = product.Star;
             FinalPrice = product.FinalPrice;
             Name = product.Name;
-            BrandId = product.BrandId;
-            CategoryName = product.Category.Name;
-            IsStock = product.IsStock;
+            Count = product.Count;
             IsInSale = product.IsInSale;
             ImageUrl = product.Images.FirstOrDefault()?.ImageUrl;
         }
         public int Star { get; set; }
         public double FinalPrice { get; set; }
         public string Name { get; set; }
-        public int BrandId { get; set; }
+        public string Brand { get; set; }
         public string CategoryName { get; set; }
-        public bool IsStock { get; set; }
+        public int Count { get; set; }
         public bool IsInSale { get; set; }
         public string ImageUrl { get; set; }
 

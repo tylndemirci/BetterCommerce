@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using BetterCommerce.Business.Abstract;
-using BetterCommerce.Core.Enums;
 using BetterCommerce.Core.Extensions;
 using BetterCommerce.Core.Factory;
 using BetterCommerce.Core.Utilities.Results;
 using BetterCommerce.DataAccess.Abstract;
 using BetterCommerce.Entity.Entities;
+using BetterCommerce.Entity.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -35,7 +35,8 @@ namespace BetterCommerce.Business.Concrete
                 .Include(x => x.Images)
                 .Include(x => x.ProductDetails)
                 .Include(x => x.Brand)
-                .Where(x => x.IsDeleted == false);
+                .Where(x => x.IsDeleted == false 
+                            && x.IsPassive ==false);
             return new SuccessDataResult<IQueryable<Product>>(allProducts);
         }
 

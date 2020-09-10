@@ -8,7 +8,7 @@ namespace BetterCommerce.Business.Abstract
     public interface IOrderService
     {
         IDataResult<IQueryable<Order>> GetOrdersOfUser(string userId);
-        IDataResult<IQueryable<OrderLine>> GetOrderLineOfOrder(int orderId);
+        IDataResult<IQueryable<OrderLine>> GetOrderLinesOfOrder(int orderId);
         IResult CreateOrder(Order order, Cart cart);
         IResult UpdateOrderStatus(Order order);
         

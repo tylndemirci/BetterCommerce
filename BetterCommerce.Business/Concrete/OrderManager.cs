@@ -7,6 +7,7 @@ using BetterCommerce.Core.Utilities.Results;
 using BetterCommerce.DataAccess.Abstract;
 using BetterCommerce.Entity.CartModels;
 using BetterCommerce.Entity.Entities;
+using BetterCommerce.Entity.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace BetterCommerce.Business.Concrete
@@ -34,7 +35,7 @@ namespace BetterCommerce.Business.Concrete
             return new SuccessDataResult<IQueryable<Order>>(orders);
         }
 
-        public IDataResult<IQueryable<OrderLine>> GetOrderLineOfOrder(int orderId)
+        public IDataResult<IQueryable<OrderLine>> GetOrderLinesOfOrder(int orderId)
         {
             var orderLine = _orderLineRepo.GetBy(x => x.OrderId == orderId);
             if (orderLine == null) return new ErrorDataResult<IQueryable<OrderLine>>("There is no order line.");
@@ -53,6 +54,7 @@ namespace BetterCommerce.Business.Concrete
             newOrder.UserId = order.UserId;
             newOrder.OrderLineId = order.OrderLineId;
             newOrder.CreatedAt = DateTime.Now;
+            newOrder.OrderStatus = EnumOrderStatus.WaitingForApproval;
             newOrder.OrderLines = new List<OrderLine>();
             foreach (var product in cart.CartLines)
             {
@@ -70,12 +72,12 @@ namespace BetterCommerce.Business.Concrete
                 ? (IResult) new SuccessResult("Order successfully created.") 
                 : new ErrorResult("Order not created.");
         }
-
+        //todo created status property for order entity.
         public IResult UpdateOrderStatus(Order order)
         {
             var updatingOrder = _orderRepo.GetBy(x => x.Id == order.Id)?.FirstOrDefault();
             if (updatingOrder==null) return new ErrorResult("Order not found.");
-            // updatingOrder.Status = order.Status;
+            updatingOrder.OrderStatus = order.OrderStatus;
             _orderRepo.Update(updatingOrder);
             var result = _unitOfWork.SaveChanges();
             return result > 0 

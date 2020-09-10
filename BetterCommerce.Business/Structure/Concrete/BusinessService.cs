@@ -67,6 +67,6 @@ namespace BetterCommerce.Business.Structure.Concrete
         public ICategoryService Category => _categoryService ??= new CategoryManager(_categoryRepo, _uow);
         
         private IOrderService _orderService;
-        public IOrderService Order => _orderService ??= new OrderManager(_orderRepo);
+        public IOrderService Order => _orderService ??= new OrderManager(_orderRepo, _orderLineRepo, _uow);
     }
 }

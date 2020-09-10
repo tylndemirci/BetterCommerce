@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using BetterCommerce.Core.Enums;
 using BetterCommerce.Core.Utilities.Results;
 using BetterCommerce.Entity.Entities;
+using BetterCommerce.Entity.Enums;
 
 namespace BetterCommerce.Business.Abstract
 {

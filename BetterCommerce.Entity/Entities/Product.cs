@@ -26,6 +26,7 @@ namespace BetterCommerce.Entity.Entities
         public bool IsInSale { get; set; }
 
         public bool IsFeatured { get; set; }
+        public bool IsPassive { get; set; }
         public ICollection<ProductImage> Images { get; set; }
         public ICollection<ProductDetail> ProductDetails { get; set; }
     }

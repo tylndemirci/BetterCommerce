@@ -1,4 +1,4 @@
-﻿namespace BetterCommerce.Core.Enums
+﻿namespace BetterCommerce.Entity.Enums
 {
     public enum EnumProductListOptions
     {
