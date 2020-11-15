@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using BetterCommerce.Entity.Enums;
 
 namespace BetterCommerce.Entity.Entities
 {
@@ -10,5 +11,7 @@ namespace BetterCommerce.Entity.Entities
         public virtual Product Product { get; set; }
         [Required] public int Quantity { get; set; }
         [Required] public double Price { get; set; }
+        
+        [Required] public EnumOrderLineStatus Status { get; set; }
     }
 }

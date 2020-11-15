@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using BetterCommerce.Core.Identity;
 using BetterCommerce.Core.Security.Jwt;
 using BetterCommerce.Core.Utilities.Results;
@@ -15,5 +16,7 @@ namespace BetterCommerce.Business.Abstract
 
         Task<IDataResult<ApplicationUser>> ChangePassword(UserForChangePassword userForChangePassword);
         Task<IResult> ChangeEmail(UserForChangeEmail userForChangeEmail);
+        
+        
     }
-}
+}    

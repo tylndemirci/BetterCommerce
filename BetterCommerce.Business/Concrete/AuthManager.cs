@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BetterCommerce.Business.Abstract;
 using BetterCommerce.Core.Identity;
@@ -156,6 +157,6 @@ namespace BetterCommerce.Business.Concrete
             return new SuccessResult("Email successfully changed.");
         }
 
-
+       
     }
 }
