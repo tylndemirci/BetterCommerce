@@ -52,8 +52,7 @@ namespace BetterCommerce.WebUI
                 opt.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
                 opt.SlidingExpiration = true;
             });
-
-            var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -62,10 +61,10 @@ namespace BetterCommerce.WebUI
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidateLifetime = true,
-                        ValidIssuer = tokenOptions.Issuer,
-                        ValidAudience = tokenOptions.Audience,
+                        ValidIssuer = TokenOptions.Issuer,
+                        ValidAudience = TokenOptions.Audience,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey)
+                        IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(TokenOptions.SecurityKey)
                     };
                 });
             services.AddSession();

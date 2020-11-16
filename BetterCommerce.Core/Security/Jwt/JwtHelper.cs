@@ -13,23 +13,19 @@ namespace BetterCommerce.Core.Security.Jwt
 {
     public class JwtHelper : ITokenHelper
     {
-        public IConfiguration Configuration { get; }
-        private readonly TokenOptions _tokenOptions;
         private readonly DateTime _accessTokenExpiration;
 
         public JwtHelper(IConfiguration configuration)
         {
-            Configuration = configuration;
-            _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
-            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
+            _accessTokenExpiration = DateTime.Now.AddMinutes(TokenOptions.AccessTokenExpiration);
         }
 
 
         public AccessToken CreateToken(ApplicationUser user, List<ApplicationRole> roles)
         {
-            var securityKey = SecurityKeyHelper.CreateSecurityKey(_tokenOptions.SecurityKey);
+            var securityKey = SecurityKeyHelper.CreateSecurityKey(TokenOptions.SecurityKey);
             var signingCredentials = SigningCredentialsHelper.CreateSigningCredentials(securityKey);
-            var jwt = CreateJwtSecurityToken(_tokenOptions, user, signingCredentials, roles);
+            var jwt = CreateJwtSecurityToken(user, signingCredentials, roles);
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var token = jwtSecurityTokenHandler.WriteToken(jwt);
             
@@ -40,11 +36,11 @@ namespace BetterCommerce.Core.Security.Jwt
             };
         }
 
-        public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions, ApplicationUser user, SigningCredentials signingCredentials, List<ApplicationRole> applicationRoles)
+        public JwtSecurityToken CreateJwtSecurityToken(ApplicationUser user, SigningCredentials signingCredentials, List<ApplicationRole> applicationRoles)
         {
             var jwt = new JwtSecurityToken(
-                issuer: _tokenOptions.Issuer,
-                audience: _tokenOptions.Audience,
+                issuer: TokenOptions.Issuer,
+                audience: TokenOptions.Audience,
                 expires: _accessTokenExpiration,
                 notBefore: DateTime.Now,
                 claims: SetClaims(user, applicationRoles),

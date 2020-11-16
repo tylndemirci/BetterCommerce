@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using BetterCommerce.Business.Abstract;
+using BetterCommerce.Business.Structure.Abstract;
 using BetterCommerce.Core.Identity;
 using BetterCommerce.DataAccess.Abstract;
 using BetterCommerce.Entity.Entities;
@@ -12,6 +13,7 @@ namespace BetterCommerce.AdminUI.Controllers
 {
     public class HomeController : BaseController
     {
+        
         public IActionResult Index()
         {
             return View();
@@ -53,12 +55,9 @@ namespace BetterCommerce.AdminUI.Controllers
         }
 
 
-        public HomeController(IAuthService authService, ICategoryService categoryService, IOrderService orderService,
-            IProductDetailService productDetailService, IProductImageService productImageService,
-            IProductService productService, IRoleService roleService, UserManager<ApplicationUser> userManager,
-            IBaseDal<Order> orderBaseDal, IBaseDal<OrderLine> orderLineBaseDal)
-            : base(authService, categoryService, orderService, productDetailService, productImageService,
-                productService, roleService, userManager, orderBaseDal, orderLineBaseDal)
+        public HomeController(UserManager<ApplicationUser> userManager, IBaseDal<Order> orderBaseDal,
+            IBaseDal<OrderLine> orderLineBaseDal, IBusinessService businessService) 
+            : base(userManager, orderBaseDal, orderLineBaseDal, businessService)
         {
         }
     }
